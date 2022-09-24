@@ -2,6 +2,8 @@
 
 The graphで作成した[shimashiサブグラフ](https://github.com/JY8752/The-graph-demo3)のweb.
 
+![image1](https://user-images.githubusercontent.com/58534052/192087724-d5679050-e3d3-4ac9-bbbc-d86bc2d84261.gif)
+
 ## init
 
 ```
