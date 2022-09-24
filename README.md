@@ -1,4 +1,4 @@
-# doodle subgraph web
+# shimahi subgraph web
 
 The graphで作成した[shimashiサブグラフ](https://github.com/JY8752/The-graph-demo3)のweb.
 
