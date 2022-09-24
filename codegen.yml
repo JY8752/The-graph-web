@@ -1,0 +1,9 @@
+overwrite: true
+schema: "https://api.thegraph.com/subgraphs/name/jy8752/shimashi"
+documents: "queries/**/*.ts"
+generates:
+  types/generated/graphql.tsx:
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+      - "typescript-react-apollo"

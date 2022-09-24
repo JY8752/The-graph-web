@@ -1,34 +1,48 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# doodle subgraph web
 
-## Getting Started
+The graphで作成した[shimashiサブグラフ](https://github.com/JY8752/The-graph-demo3)のweb.
 
-First, run the development server:
+## init
 
-```bash
-npm run dev
-# or
-yarn dev
+```
+npx create-next-app --ts .
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## setup
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+### graphql
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+```
+yarn add @apollo/client graphql
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### graphql codegen
 
-## Learn More
+```
+yarn add -D @graphql-codegen/cli
+yarn add -D @graphql-codegen/typescript
 
-To learn more about Next.js, take a look at the following resources:
+yarn graphql-codegen init
+? What type of application are you building? Application built with React
+? Where is your schema?: (path or url) https://api.thegraph.com/subgraphs/name/jy8752/doodle
+? Where are your operations and fragments?: queries/**/*.ts
+? Pick plugins: TypeScript (required by other typescript plugins), TypeScript Operations (operations and fragments), TypeScript React Apollo (typed components and HOCs)
+? Where to write the output: types/generated/graphql.tsx
+? Do you want to generate an introspection file? No
+? How to name the config file? codegen.yml
+? What script in package.json should run the codegen? gen-types
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+yarn gen-types
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## css
 
-## Deploy on Vercel
+```
+yarn add clsx
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### ipfs
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```
+yarn add ipfs-core
+```
